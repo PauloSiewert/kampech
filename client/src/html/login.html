@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Kampech</title>
+        <link rel="stylesheet" href="/css/styles.css" />
+        <link rel="icon" href="/assets/Kumpech_logo_noText.png" />
+        <script src="banana.js"></script>
+    </head>
+
+    <body>
+        <header>
+            <div class="headerLeft">
+                <a href="../index.html" class="nome_logo">
+                    <img src="/assets/Kumpech_logo_noText.png" alt="logo" class="logo" />
+                    <h1>Kampech</h1>
+                </a>
+            </div>
+            <div class="headerRight">
+                <input type="text" placeholder="Buscar.." id="searchBar" />
+                <button onclick="searchBar_slide()" class="searchButton">
+                    <img src="/assets/searchIcon.svg" alt="searchIcon" class="searchIcon" />
+                </button>
+                <a href="/html/login.html" class="accountIcon">
+                    <img src="/assets/accountIcon.svg" alt="accountIcon" />
+                </a>
+                <button class="cartIcon" onclick="cartAnimation()">
+                    <img src="/assets/cartIcon.svg" alt="cartIcon" />
+                </button>
+            </div>
+            <div class="cartPopUp">
+                <button class="close_button" onclick="cartAnimation()">
+                    <img
+                        class="close_button__img"
+                        alt="close_button"
+                        src="./assets/close_button.svg"
+                    />
+                    <h4 class="close_button__title">Fechar</h4>
+                </button>
+                <div class="cartPopUp__item">
+                    <div class="cartPopUp__item__left">
+                        <img
+                            class="cartPopUp__item__left__img"
+                            src="./assets/keyboardExample.png"
+                        />
+                    </div>
+                    <div class="cartPopUp__item__right">
+                        <h1 class="cartPopUp__item__right__title">Teclado Mecânico</h1>
+                        <h2 class="cartPopUp__item__right__desc">Descrição simples</h2>
+                        <div class="cartPopUp__item__right__bottom">
+                            <input
+                                class="quantity"
+                                type="number"
+                                name="quantity"
+                                min="0"
+                                value="1"
+                            />
+                            <h1 class="cartPopUp__item__right__bottom__price">696,90</h1>
+                        </div>
+                        <div></div>
+                    </div>
+                </div>
+                <div class="cartPopUp__item">
+                    <div class="cartPopUp__item__left">
+                        <img
+                            class="cartPopUp__item__left__img"
+                            src="./assets/keyboardExample.png"
+                        />
+                    </div>
+                    <div class="cartPopUp__item__right"></div>
+                </div>
+            </div>
+        </header>
+
+        <main class="login">
+            <form class="login__container" action="http://localhost:6942/login/" method="post">
+                <h1 id="login__title">Login</h1>
+                <input name="email" type="email" placeholder="Email" id="login__email" />
+                <input name="senha" type="password" placeholder="Senha" id="login__password" />
+                <a id="login__forgotPassword" href=""><p>Esqueceu sua senha?</p></a>
+                <p class="mensagem__erro"></p>
+                <button id="login__enter"><p>Entrar</p></button>
+                <a id="login__register" href="register.html"><p>Criar uma conta</p></a>
+            </form>
+        </main>
+
+        <footer></footer>
+        <script src="/javascript/login.js"></script>
+    </body>
+</html>

@@ -1,0 +1,600 @@
+@import url("https://fonts.googleapis.com/css2?family=Lobster&family=Noto+Sans:wght@600&display=swap");
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+/* Header */
+
+header {
+    position: fixed;
+    background-color: #ffffff;
+    width: 100%;
+    max-width: 100%;
+    height: 5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 2;
+}
+
+header > div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: auto;
+    height: 90%;
+}
+
+.headerLeft {
+    gap: 0 5%;
+    margin-left: 3%;
+}
+
+.nome_logo {
+    width: auto;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: black;
+}
+
+.logo {
+    width: auto;
+    height: 100%;
+}
+
+h1 {
+    font-family: "Lobster", cursive;
+    font-size: 30px;
+}
+
+.headerRight {
+    display: flex;
+    justify-content: end;
+    gap: 0 5%;
+    margin-right: 1%;
+    width: 50%;
+}
+
+.accountIcon {
+    width: auto;
+    height: 50%;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+.cartIcon {
+    width: auto;
+    height: 50%;
+    background: none;
+    border: none;
+}
+
+.accountIcon > img {
+    width: auto;
+    height: 100%;
+}
+
+.accountIcon > a > img {
+    width: auto;
+    height: 100%;
+}
+
+.cartIcon > img {
+    width: auto;
+    height: 100%;
+    cursor: pointer;
+}
+
+.searchButton {
+    width: auto;
+    height: 50%;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+.searchIcon {
+    width: auto;
+    height: 100%;
+}
+
+#searchBar {
+    display: none;
+    background-color: #f1f1f1;
+    border: 2px solid black;
+    border-radius: 10px;
+    padding: 10px;
+    width: 40%;
+    font-size: 15px;
+    animation: searchBar_slide 0.7s;
+}
+
+@keyframes searchBar_slide {
+    from {
+        width: 0px;
+    }
+
+    to {
+        width: 40%;
+    }
+}
+
+.cartPopUp {
+    display: none;
+    /* display: flex; */
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: start;
+    position: fixed;
+    top: 4rem;
+    right: 1rem;
+    z-index: 3;
+    width: 20%;
+    height: 50%;
+    border-radius: 20px;
+    animation: cartAnimation 0.5s;
+    background-color: #f1ecec;
+}
+
+@keyframes cartAnimation {
+    from {
+        width: 0px;
+        height: 0px;
+    }
+
+    to {
+        width: 20%;
+        height: 50%;
+    }
+}
+
+.close_button {
+    display: flex;
+    align-items: center;
+    margin-left: 2%;
+    margin-top: 1%;
+    width: 50%;
+    height: auto;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+.close_button__img {
+    width: 30%;
+    height: auto;
+}
+
+.close_button__title {
+    width: 50%;
+    height: auto;
+    font-family: "Open Sans", sans-serif;
+    font-weight: 300;
+    font-size: 23px;
+}
+
+.cartPopUp__item,
+.cartPopUp__item2 {
+    display: flex;
+    justify-content: space-between;
+    width: 90%;
+    height: 20%;
+    margin-left: 5%;
+    margin-top: 3%;
+}
+
+.cartPopUp__item__left {
+    width: 30%;
+    height: 100%;
+}
+
+.cartPopUp__item__left__img {
+    width: 100%;
+    height: auto;
+}
+
+.cartPopUp__item__right {
+    width: 65%;
+    height: 100%;
+}
+
+.cartPopUp__item__right__title {
+    font-family: "Open Sans", sans-serif;
+    font-weight: bold;
+    font-size: 17px;
+}
+
+.cartPopUp__item__right__desc {
+    font-family: "Open Sans", sans-serif;
+    font-weight: 100;
+    font-size: 15px;
+    margin-bottom: 5%;
+}
+
+.cartPopUp__item__right__bottom {
+    display: flex;
+    position: relative;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.quantity {
+    width: 30%;
+    height: 40%;
+    text-align: center;
+}
+
+.quantity::-webkit-inner-spin-button,
+.quantity::-webkit-outer-spin-button {
+    opacity: 1;
+}
+
+.cartPopUp__item__right__bottom__price {
+    font-family: "Open Sans", sans-serif;
+    font-weight: bold;
+    font-size: 17px;
+}
+
+/* Main */
+
+main {
+    margin-top: 5rem;
+}
+
+/* index.html */
+
+/* body */
+
+body {
+    background-color: #f3f5f8;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.container {
+    width: 100%;
+    color: white;
+    margin-top: 2%;
+}
+
+.keyboardCustom {
+    position: relative;
+    border-radius: 20px;
+    animation: fade-in 0.5s;
+}
+
+.adzig {
+    position: relative;
+    border-radius: 20px;
+    animation: fade-in 0.5s;
+    width: 900px;
+    height: 450px;
+}
+
+.keyboardBuy {
+    position: relative;
+    border-radius: 20px;
+    animation: fade-in 0.5s;
+}
+
+@keyframes fade-in {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/* login.html */
+
+/* body */
+
+.login {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+
+.login__container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 3%;
+    width: 40%;
+}
+
+#login__title {
+    font-family: "Open Sans", sans-serif;
+    font-weight: 300;
+    font-size: 52px;
+    margin-bottom: 3%;
+}
+
+#login__email,
+#login__password {
+    margin-top: 6%;
+    background-color: #ffffff;
+    border: 2px solid black;
+    padding: 10px 0 10px 5px;
+    width: 99%;
+    font-size: 15px;
+}
+
+#login__forgotPassword {
+    align-self: end;
+    text-decoration: none;
+    color: black;
+    font-family: "Open Sans", sans-serif;
+    font-weight: 600;
+    font-size: 14px;
+    margin-top: 3%;
+}
+
+#login__enter {
+    background-color: black;
+    color: white;
+    border-radius: 25px;
+    width: 100%;
+    padding: 20px 0 20px 0;
+    text-align: center;
+    text-decoration: none;
+    font-family: "Open Sans", sans-serif;
+    font-weight: 600;
+    font-size: 20px;
+    margin-top: 6%;
+}
+
+#login__register {
+    align-self: start;
+    text-decoration: none;
+    color: black;
+    font-family: "Open Sans", sans-serif;
+    font-weight: 600;
+    font-size: 14px;
+    margin-top: 3%;
+}
+
+/* register.html */
+
+/* body */
+
+.register {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+
+.register__container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 3%;
+    width: 40%;
+}
+
+#register__title {
+    font-family: "Open Sans", sans-serif;
+    font-weight: 300;
+    font-size: 52px;
+    margin-bottom: 3%;
+}
+
+#register__name,
+#register__email,
+#register__password,
+#register__confirmPassword {
+    margin-top: 4%;
+    background-color: #ffffff;
+    border: 2px solid black;
+    padding: 10px 0 10px 5px;
+    width: 99%;
+    font-size: 15px;
+}
+
+#register__enter {
+    background-color: black;
+    color: white;
+    border-radius: 25px;
+    width: 100%;
+    padding: 20px 0 20px 0;
+    text-align: center;
+    text-decoration: none;
+    font-family: "Open Sans", sans-serif;
+    font-weight: 600;
+    font-size: 20px;
+    margin-top: 6%;
+}
+
+#register__login {
+    align-self: start;
+    text-decoration: none;
+    color: black;
+    font-family: "Open Sans", sans-serif;
+    font-weight: 600;
+    font-size: 14px;
+    margin-top: 3%;
+}
+
+/* shipping.html */
+
+/* body */
+
+.shipping {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: 80%;
+    position: absolute;
+    gap: 0 5%;
+}
+
+.shipping__left {
+    display: flex;
+    flex-direction: column;
+    width: 40%;
+    height: 80%;
+    margin-top: 2%;
+    position: relative;
+}
+
+.shipping__title {
+    font-family: "Open Sans", sans-serif;
+    font-weight: 400;
+    font-size: 30px;
+}
+
+#shipping__left__contact {
+    font-family: "Open Sans", sans-serif;
+    font-weight: 100;
+    font-size: 20px;
+    margin-top: 5%;
+}
+
+#shipping__left__checkbox {
+    font-family: "Open Sans", sans-serif;
+    font-weight: 100;
+    font-size: 15px;
+    margin-top: 5%;
+}
+
+#shipping__left__logout {
+    font-family: "Open Sans", sans-serif;
+    font-weight: 200;
+    font-size: 20px;
+    color: black;
+    text-decoration: underline;
+    margin-top: 5%;
+    width: fit-content;
+}
+
+#shipping__left__return {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 15%;
+    bottom: 25%;
+    position: absolute;
+    text-decoration: none;
+}
+
+#shipping__left__return__button {
+    width: 30%;
+    height: auto;
+}
+
+#shipping__left__return__text {
+    font-family: "Open Sans", sans-serif;
+    font-weight: 200;
+    font-size: 20px;
+    color: black;
+}
+
+.shipping__right {
+    display: flex;
+    flex-direction: column;
+    width: 40%;
+    height: 80%;
+    margin-top: 2%;
+    gap: 5% 0;
+}
+
+.shipping__right__inputBig {
+    background-color: #ffffff;
+    border: 2px solid black;
+    padding: 10px 0 10px 5px;
+    width: 99%;
+    font-size: 15px;
+}
+
+.shipping__right__inputSmall {
+    background-color: #ffffff;
+    border: 2px solid black;
+    padding: 10px 0 10px 5px;
+    width: 33%;
+    font-size: 15px;
+}
+
+.city_state {
+    display: flex;
+    justify-content: space-between;
+    width: 100.5%;
+}
+
+#city {
+    background-color: #ffffff;
+    border: 2px solid black;
+    padding: 10px 0 10px 5px;
+    width: 60%;
+    font-size: 15px;
+}
+
+#shipping__right__button {
+    background-color: black;
+    color: white;
+    border-radius: 50px;
+    width: 100%;
+    padding: 15px 0 15px 0;
+    font-family: "Open Sans", sans-serif;
+    font-weight: 400;
+    font-size: 30px;
+}
+
+.mensagem__erro {
+    color: red;
+    text-align: center;
+    padding-top: 20px;
+    font-family: Arial;
+}
+
+/* editar */
+
+.editar__container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 3%;
+    width: 40%;
+}
+
+.editar__container h4 {
+    font-family: "Open Sans", sans-serif;
+    font-weight: 300;
+    font-size: 16pt;
+    margin-top: 8px;
+}
+
+#editar__name,
+#editar__email,
+#editar__password {
+    margin-top: 16px;
+    background-color: #ffffff;
+    border: 2px solid black;
+    padding: 10px 0 10px 5px;
+    width: 99%;
+    font-size: 15px;
+}
+
+#apagar__conta {
+    background-color: red;
+    color: white;
+    border-radius: 25px;
+    width: 25%;
+    padding: 12px 0 12px 0;
+    text-align: center;
+    text-decoration: none;
+    font-family: "Open Sans", sans-serif;
+    font-weight: 600;
+    font-size: 16px;
+    margin-top: 12px;
+}

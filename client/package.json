@@ -1,0 +1,16 @@
+{
+    "name": "client",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "scripts": {
+        "dev": "http-server src --cors -p 5501"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC",
+    "type": "module",
+    "dependencies": {
+        "http-server": "^14.1.1"
+    }
+}

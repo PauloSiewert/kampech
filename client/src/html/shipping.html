@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Kampech</title>
+        <link rel="stylesheet" href="/css/styles.css" />
+        <link rel="icon" href="/assets/Kumpech_logo_noText.png" />
+        <script src="banana.js"></script>
+    </head>
+
+    <body>
+        <header>
+            <div class="headerLeft">
+                <a href="/index.html" class="nome_logo">
+                    <img src="/assets/Kumpech_logo_noText.png" alt="logo" class="logo" />
+                    <h1>Kampech</h1>
+                </a>
+            </div>
+            <div class="headerRight">
+                <input type="text" placeholder="Buscar.." id="searchBar" />
+                <button onclick="searchBar_slide()" class="searchButton">
+                    <img src="/assets/searchIcon.svg" alt="searchIcon" class="searchIcon" />
+                </button>
+                <a href="login.html" class="accountIcon">
+                    <img src="/assets/accountIcon.svg" alt="accountIcon" />
+                </a>
+                <button class="cartIcon" onclick="cartAnimation()">
+                    <img src="/assets/cartIcon.svg" alt="cartIcon" />
+                </button>
+            </div>
+            <div class="cartPopUp">
+                <button class="close_button" onclick="cartAnimation()">
+                    <img
+                        class="close_button__img"
+                        alt="close_button"
+                        src="./assets/close_button.svg"
+                    />
+                    <h4 class="close_button__title">Fechar</h4>
+                </button>
+                <div class="cartPopUp__item">
+                    <div class="cartPopUp__item__left">
+                        <img
+                            class="cartPopUp__item__left__img"
+                            src="./assets/keyboardExample.png"
+                        />
+                    </div>
+                    <div class="cartPopUp__item__right">
+                        <h1 class="cartPopUp__item__right__title">Teclado Mecânico</h1>
+                        <h2 class="cartPopUp__item__right__desc">Descrição simples</h2>
+                        <div class="cartPopUp__item__right__bottom">
+                            <input
+                                class="quantity"
+                                type="number"
+                                name="quantity"
+                                min="0"
+                                value="1"
+                            />
+                            <h1 class="cartPopUp__item__right__bottom__price">696,90</h1>
+                        </div>
+                        <div></div>
+                    </div>
+                </div>
+                <div class="cartPopUp__item">
+                    <div class="cartPopUp__item__left">
+                        <img
+                            class="cartPopUp__item__left__img"
+                            src="./assets/keyboardExample.png"
+                        />
+                    </div>
+                    <div class="cartPopUp__item__right"></div>
+                </div>
+            </div>
+        </header>
+
+        <main class="shipping">
+            <div class="shipping__left">
+                <h1 id="shipping__left__title" class="shipping__title">Informações de contato</h1>
+                <h3 id="shipping__left__contact">
+                    Henrique Gomes (henrique_rei_delas_69420@gmail.com)
+                </h3>
+                <div>
+                    <input
+                        type="checkbox"
+                        id="shipping__left__checkbox"
+                        name="shipping__checkbox"
+                        checked
+                    />
+                    <label for="shipping__left__checkbox">Quero receber notícias e promoções</label>
+                </div>
+                <a id="shipping__left__logout" href="">Sair</a>
+                <a id="shipping__left__return" href="">
+                    <img id="shipping__left__return__button" src="/assets/back_button.png" />
+                    <h2 id="shipping__left__return__text">Voltar</h2>
+                </a>
+            </div>
+
+            <div class="shipping__right">
+                <h1 id="shipping__right__title" class="shipping__title">Endereço para envio:</h1>
+                <input
+                    type="text"
+                    id="shipping__right__name"
+                    class="shipping__right__inputBig"
+                    placeholder="Nome Completo:"
+                />
+                <input
+                    type="text"
+                    id="address"
+                    class="shipping__right__inputBig"
+                    placeholder="Endereço:"
+                />
+                <input
+                    type="number"
+                    id="zipCode"
+                    class="shipping__right__inputSmall"
+                    placeholder="CEP"
+                />
+                <div class="city_state">
+                    <input type="text" id="city" placeholder="Cidade" />
+                    <input
+                        type="text"
+                        id="state"
+                        class="shipping__right__inputSmall"
+                        placeholder="Estado"
+                    />
+                </div>
+                <input
+                    type="tel"
+                    maxlength="15"
+                    onkeyup="handlePhone(event)"
+                    id="phone"
+                    class="shipping__right__inputBig"
+                    placeholder="Telefone:"
+                />
+                <button type="submit" id="shipping__right__button">Próximo</button>
+            </div>
+        </main>
+
+        <footer></footer>
+    </body>
+</html>

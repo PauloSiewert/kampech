@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Kampech</title>
+        <link rel="stylesheet" href="/css/styles.css" />
+        <link rel="icon" href="/assets/Kumpech_logo_noText.png" />
+    </head>
+
+    <body>
+        <header>
+            <div class="headerLeft">
+                <a href="index.html" class="nome_logo">
+                    <img src="/assets/Kumpech_logo_noText.png" alt="logo" class="logo" />
+                    <h1>Kampech</h1>
+                </a>
+            </div>
+            <div class="headerRight">
+                <input type="text" placeholder="Buscar.." id="searchBar" />
+                <button onclick="searchBar_slide()" class="searchButton">
+                    <img src="/assets/searchIcon.svg" alt="searchIcon" class="searchIcon" />
+                </button>
+                <a href="/html/login.html" class="accountIcon">
+                    <img src="/assets/accountIcon.svg" alt="accountIcon" />
+
+                    <hr
+                        style="
+                            border: 1px solid black;
+                            width: 90%;
+                            align-self: center;
+                            margin-top: 10%;
+                        "
+                    />
+                </a>
+                <button class="cartIcon" onclick="cartAnimation()">
+                    <img src="/assets/cartIcon.svg" alt="cartIcon" />
+                </button>
+            </div>
+        </header>
+
+        <main class="index">
+            <a href="" class="keyboardCustom_link">
+                <div class="container">
+                    <img
+                        src="/assets/keyboardCustom.png"
+                        alt="keyboardCustom"
+                        class="keyboardCustom"
+                    />
+                </div>
+            </a>
+
+            <a href="" class="keyboardBuy_link">
+                <div class="container">
+                    <img src="/assets/zig.png" alt="ad" class="adzig" />
+                </div>
+            </a>
+
+            <a href="" class="keyboardBuy_link">
+                <div class="container">
+                    <img src="/assets/davajonas.png" alt="ad" class="adzig" />
+                </div>
+            </a>
+
+            <a href="" class="keyboardBuy_link">
+                <div class="container">
+                    <img src="/assets/keyboardBuy.png" alt="keyboardBuy" class="keyboardBuy" />
+                </div>
+            </a>
+        </main>
+
+        <footer></footer>
+        <script src="/javascript/loginUsuario.js"></script>
+    </body>
+</html>
