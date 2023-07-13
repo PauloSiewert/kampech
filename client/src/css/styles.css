@@ -114,45 +114,6 @@ h1 {
     animation: searchBar_slide 0.7s;
 }
 
-@keyframes searchBar_slide {
-    from {
-        width: 0px;
-    }
-
-    to {
-        width: 40%;
-    }
-}
-
-.cartPopUp {
-    display: none;
-    /* display: flex; */
-    flex-direction: column;
-    align-items: flex-start;
-    justify-content: start;
-    position: fixed;
-    top: 4rem;
-    right: 1rem;
-    z-index: 3;
-    width: 20%;
-    height: 50%;
-    border-radius: 20px;
-    animation: cartAnimation 0.5s;
-    background-color: #f1ecec;
-}
-
-@keyframes cartAnimation {
-    from {
-        width: 0px;
-        height: 0px;
-    }
-
-    to {
-        width: 20%;
-        height: 50%;
-    }
-}
-
 .close_button {
     display: flex;
     align-items: center;
@@ -251,7 +212,7 @@ main {
 /* body */
 
 body {
-    background-color: #f3f5f8;
+    background-color: #f3f5f8 !important;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -281,15 +242,6 @@ body {
     position: relative;
     border-radius: 20px;
     animation: fade-in 0.5s;
-}
-
-@keyframes fade-in {
-    from {
-        opacity: 0;
-    }
-    to {
-        opacity: 1;
-    }
 }
 
 /* login.html */
@@ -598,3 +550,31 @@ body {
     font-size: 16px;
     margin-top: 12px;
 }
+
+#login_enter {
+    background-color: black;
+    color: white;
+    border-radius: 25px;
+    width: 100%;
+    padding: 20px 0 20px 0;
+    text-align: center;
+    text-decoration: none;
+    font-family: "Open Sans", sans-serif;
+    font-weight: 600;
+    font-size: 20px;
+    margin-top: 6%;
+}
+
+.texto-centralizado {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+  
+  .link-sublinhado {
+    text-decoration: underline;
+  }
+
+
+
